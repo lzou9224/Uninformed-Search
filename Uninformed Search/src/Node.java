@@ -2,8 +2,8 @@
 //Lingli Zou
 //Mr. Levin Pd.2
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+
 public class Node {
 
 	public String Map; //test map of the United States
@@ -34,16 +34,6 @@ public class Node {
 	        return childNodes;
 	    }
 	 
-	 public ArrayList<Node>setChildren()
-	 {
-	        ArrayList<Node>childNodes = new ArrayList<>();
-
-	 }
-	 
-	 public String toString()
-	 {
-		 return null;
-	 }
 	 
 	 public boolean removeChild(Node n)
 	 {
