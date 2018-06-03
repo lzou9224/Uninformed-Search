@@ -15,7 +15,7 @@ public class BreathFirstSearch
     public boolean compute(){
 
         if(this.start.equals(end)){
-            System.out.println("Goal Node Found!");
+            System.out.println("Goal City Found!");
             System.out.println(start);
         }
 
