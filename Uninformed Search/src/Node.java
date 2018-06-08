@@ -17,6 +17,7 @@ public class Node {
 	public Node (String Map, int x, int posx, int posy)
 	{
 		this.Map = Map;
+		this.children=children
 		this.posx = posx;
 		this.posy = posy;
 	}
