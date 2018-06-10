@@ -7,36 +7,33 @@ import java.util.ArrayList;
 public class Node {
 
 	public String Map; //test map of the United States
+	ArrayList<Node> children;
 	
-		Node left;
-		Node right;
-		
-	public Node (String Map, Node first, Node second)
+	public Node (ArrayList<Node> children)
 	{
-		this.Map = Map;
-		this.left.left = first;
-		this.right = second;
+		this.children = children;
 	}
-	
-	 public ArrayList<Node>getChildren() //return a list of all connected nodes
-	 {
-	        ArrayList<Node>childNodes = new ArrayList<>();
-	        
-	        if (this.left != null)
-	        {
-	            childNodes.add(left);
-	        }
-	        
-	        if (this.right != null) 
-	        {
-	            childNodes.add(right);
-	        }
-	        return childNodes;
-	    }
 	 
-	 
-	 public boolean removeChild(Node n)
+	public boolean removeChild(Node n)
 	 {
 	        return false;
 	 }
+	 
+	public ArrayList<Node>getChildren() //return a list of all connected nodes
+	 {
+	        ArrayList<Node>childNodes = new ArrayList<>();
+	        
+	        for(int x=0; x<children.size(); x++)
+	        {
+	        	if(this.children.get(x)!=null)
+	        	{
+	        		childNodes.add(this.children.get(x));
+	        	}
+	        	
+	        }
+	        	return childNodes;
+	        
+	        }
+	 
+	
 }

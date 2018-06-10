@@ -1,6 +1,6 @@
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.Queue;
+import java.util.LinkedList;
 
 public class BreathFirstSearch 
 {
@@ -28,7 +28,8 @@ public class BreathFirstSearch
         while(!queue.isEmpty())
         {
             Node current = queue.remove();
-            if (current.equals(this.end)) {
+            if (current.equals(this.end)) 
+            {
                 System.out.println(explored);
                 return true;
             }
