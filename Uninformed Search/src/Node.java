@@ -6,12 +6,13 @@ import java.util.ArrayList;
 
 public class Node {
 
-	public String Map; //test map of the United States
+	Node parent;
 	ArrayList<Node> children;
 	
-	public Node (ArrayList<Node> children)
+	public Node (ArrayList<Node> children, Node parent)
 	{
 		this.children = children;
+		this.parent = parent;
 	}
 	 
 	public boolean removeChild(Node n)
@@ -19,6 +20,16 @@ public class Node {
 	        return false;
 	 }
 	 
+	public Node getParent() 
+	{
+		return parent;
+	}
+
+	public void setParent(Node parent) 
+	{
+		this.parent = parent;
+	}
+
 	public ArrayList<Node>getChildren() //return a list of all connected nodes
 	 {
 	        ArrayList<Node>childNodes = new ArrayList<>();
@@ -35,5 +46,8 @@ public class Node {
 	        
 	        }
 	 
-	
+	public void setChildren(ArrayList<Node> children)
+	{
+		this.children = children;
+	}
 }
